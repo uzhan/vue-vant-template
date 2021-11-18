@@ -5,11 +5,14 @@
 ## vant ui
 已封装按需引入
 
-## Axios
+## axios
 封装axios请求以及自定义错误处理，目录：src/utils/request.js
 
 ## vConsole
 vConsole只应用于开发环境，正式环境不会使用到。对应代码：src/main.js
+
+## pxtorem
+脚手架集成pxtorem 基准值为37.5。代码中可直接写px单位即可，无须单独转换
 
 ## Project setup
 ```
@@ -32,8 +35,8 @@ yarn lint
 ```
 
 ## Tip
-1.对于moment H5应用中建议使用dayjs替代。
-2.对于sass，由于node-sass的不稳定性，建议使用less替代
+- 1.对于moment H5应用中建议使用dayjs替代。
+- 2.对于sass，由于node-sass的不稳定性，建议使用less替代
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
