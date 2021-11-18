@@ -3,6 +3,7 @@ tests/unit/coverage
 .DS_Store
 node_modules
 /dist
+/public
 
 # local env files
 .env.local
