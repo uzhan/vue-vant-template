@@ -8,13 +8,13 @@
 已封装按需引入
 
 ### axios
-封装axios请求以及自定义错误处理，目录：src/utils/request.js
+封装`axios`请求以及自定义错误处理，目录：`src/utils/request.js`
 
 ### vConsole
-vConsole只应用于开发环境，正式环境不会使用到。对应代码：src/main.js
+`vConsole`只应用于开发环境，正式环境不会使用到。对应代码：`src/main.js`
 
 ### 移动端适配
-脚手架集成pxtorem 基准值为37.5。代码中可直接写px单位即可，无须单独转换
+脚手架集成`pxtorem` 基准值为`37.5`。代码中可直接写px单位即可，无须单独转换
 
 ### 日期工具类
 本框架对常用的日期工具类进行了封装，方便开发时使用，不需要重复造轮子
