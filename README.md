@@ -1,6 +1,6 @@
 # vue-vant-template
 
-> vue vant h5应用集成模版，集成框架：vant-ui、axios、eslint、commit lint、stylelint、vConsole
+> vue vant h5应用集成模版，集成框架：vant-ui、axios、eslint、commit lint、stylelint、vConsole、gzip ... 等等
 
 # 功能点
 
@@ -51,10 +51,18 @@ yarn build
 ```
 yarn lint
 ```
+### issue
+该项目也会不断的完善，如遇到问题可在issue提交～
 
-## Tip
+### Tip
 - 1.对于moment H5应用中建议使用dayjs替代。
 - 2.对于sass，由于node-sass的不稳定性，建议使用less替代
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### License
+
+[MIT](https://github.com/uzhan/vue-vant-template/blob/main/LICENSE) license.
+
+Copyright (c) 2021-present BaiHuaYang
