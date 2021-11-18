@@ -1,6 +1,7 @@
 # vue-vant-template
 
 > vue vant h5应用集成模版，集成框架：vant-ui、axios、eslint、commit lint、stylelint、vConsole、gzip ... 等等
+> [国内仓库](https://gitee.com/uzhan/vue-vant-template)
 
 # 功能点
 
@@ -32,7 +33,7 @@
 
 本框架内部集成了`eslint`与`stylelint`，全方位的去管控代码规范，为了方便使用，建议使用开发工具如 `vscode` 时需要安装`eslint`与`stylelint`插件
 
-## Project setup
+### Project setup
 ```
 yarn install
 ```
