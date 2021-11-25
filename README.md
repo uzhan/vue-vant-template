@@ -1,6 +1,6 @@
 # vue-vant-template
 
-> vue vant h5应用集成模版，集成框架：vant-ui、axios、eslint、commit lint、stylelint、vConsole、gzip ... 等等
+> vue vant h5应用脚手架集成模版，集成封装框架：vant-ui、axios、eslint、commit lint、stylelint、vConsole、gzip ... 等等
 
 国内仓库：[https://gitee.com/uzhan/vue-vant-template](https://gitee.com/uzhan/vue-vant-template)
 
