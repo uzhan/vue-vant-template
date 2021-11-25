@@ -1,6 +1,6 @@
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
-const defalutConfig = require('./config')
+const defalutConfig = require('./src/settings')
 
 module.exports = {
   publicPath: isProd ? process.env.VUE_APP_PUBLIC_PATH : '/',
