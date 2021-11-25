@@ -10,7 +10,6 @@
 #app {
   height: 100vh;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
