@@ -7,7 +7,7 @@
 # 功能点
 
 ### vant ui
-脚手架已集成vant ui按需引入，对应文件`src/vant.js`
+脚手架已集成`vant-ui`按需引入，对应文件`src/vant.js`
 
 ### axios
 封装`axios`请求以及自定义错误处理，目录：`src/utils/request.js`
