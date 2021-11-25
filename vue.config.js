@@ -39,7 +39,7 @@ module.exports = {
       less: {
         lessOptions: {
           modifyVars: {
-            hack: 'true;@import "~@/style/_variables.less"'
+            hack: 'true;@import "~@/styles/variables.less"'
           }
         }
       }
