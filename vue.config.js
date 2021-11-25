@@ -3,10 +3,10 @@ const isProd = process.env.NODE_ENV === 'production'
 const defalutConfig = require('./config')
 
 module.exports = {
-  // 公共文件路径
-  publicPath: '/',
-  // 静态资源(js、css、img、fonts)目录
+  publicPath: isProd ? process.env.VUE_APP_PUBLIC_PATH : '/',
+  outputDir: 'dist',
   assetsDir: 'static',
+  lintOnSave: process.env.NODE_ENV === 'development',
   // sourceMap
   productionSourceMap: false,
 
