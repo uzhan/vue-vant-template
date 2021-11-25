@@ -61,7 +61,7 @@ const createRouter = () =>
     // mode: 'history', // require service support
     base: process.env.BASE_URL,
     scrollBehavior: () => ({ y: 0 }),
-    routes: constantRoutes
+    routes: [...constantRoutes, ...routes]
   })
 
 const router = createRouter()
