@@ -6,12 +6,34 @@
   </div>
 </template>
 <script>
+import { getSystemAgent, isAlipayOrWechat } from '@/utils'
+
 export default {
-  name: 'App'
+  name: 'App',
+  created() {
+    this.handleDocumentInit()
+  },
+  methods: {
+    handleDocumentInit() {
+      getSystemAgent()
+      isAlipayOrWechat()
+    }
+  }
 }
 </script>
 
 <style lang="less">
+@font-face {
+  font-family: DIN Medium;
+  font-style: normal;
+  src: url('https://assets.uphicoo.com/fonts/DIN-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Source Han Sans CN;
+  src: url('https://mat.uphicoo.com/packages/fonts/SourceHanSansCNRegular.woff') format('woff'), url('https://mat.uphicoo.com/packages/fonts/SourceHanSansCNRegular.ttf') format('truetype');
+}
+
 #root {
   height: 100vh;
   font-family: Avenir, Helvetica, Arial, sans-serif;

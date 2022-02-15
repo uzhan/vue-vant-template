@@ -10,8 +10,12 @@ service.interceptors.request.use(
   (config) => {
     // Add X-Access-Token header to every request, you can add other custom headers here
     const token = sessionStorage.getItem('token') || ''
+    const card_id = localStorage.getItem('card_id')
     if (token) {
       Object.assign(config.headers, { Authorization: token })
+    }
+    if (card_id) {
+      config.headers['card-id'] = card_id
     }
     return config
   },

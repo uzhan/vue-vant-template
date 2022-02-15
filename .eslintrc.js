@@ -9,6 +9,11 @@ module.exports = {
     node: true,
     es6: true
   },
+  globals: {
+    android: true,
+    wx: true,
+    AMap: true
+  },
   extends: ['plugin:vue/recommended', 'eslint:recommended'],
 
   // add your custom rules here
