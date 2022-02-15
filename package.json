@@ -44,7 +44,6 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-less": "^1.0.1",
     "stylelint-prettier": "^2.0.0",
-    "vconsole": "^3.9.5",
     "vue-router": "^3.5.3",
     "vue-template-compiler": "^2.6.11",
     "vuex": "^3.6.2",
