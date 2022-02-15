@@ -13,9 +13,7 @@ const name = defaultSettings.title || 'vue mobile template'
 const IS_PROD = process.env.NODE_ENV === 'production'
 
 // externals
-const externals = {
-  vconsole: 'vConsole'
-}
+const externals = {}
 
 // CDN外链，会插入到index.html中
 const cdn = {

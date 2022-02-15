@@ -8,10 +8,10 @@ import './components'
 
 Vue.config.productionTip = false
 
-// 开发环境下面使用vConsole进行调试
+// 非生产环境下面使用vConsole进行调试
 if (process.env.VUE_APP_NODE_ENV === 'development') {
-  const VConsole = require('vconsole')
-  new VConsole()
+  const vconsole = new VConsole()
+  console.info('vconsole load success!', vconsole)
 }
 
 new Vue({

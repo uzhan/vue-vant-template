@@ -12,7 +12,8 @@ module.exports = {
   globals: {
     android: true,
     wx: true,
-    AMap: true
+    AMap: true,
+    VConsole: true
   },
   extends: ['plugin:vue/recommended', 'eslint:recommended'],
 
