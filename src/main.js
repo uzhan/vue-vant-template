@@ -11,7 +11,7 @@ Vue.config.productionTip = false
 // 非生产环境下面使用vConsole进行调试
 if (process.env.VUE_APP_NODE_ENV === 'development') {
   const vconsole = new VConsole()
-  console.info(`vconsole load success, version: ${vconsole.version}`)
+  console.info(`[vconsole] load success, version: ${vconsole.version}`)
 }
 
 new Vue({
