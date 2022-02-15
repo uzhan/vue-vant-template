@@ -77,7 +77,7 @@ module.exports = {
 
     config.plugins.push(
       new CompressionPlugin({
-        filename: '[path].gz[query]', // 目标资源名称
+        filename: '[path][base].gz', // 目标资源名称
         algorithm: 'gzip',
         test: /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i, // 处理所有匹配此 {RegExp} 的资源
         threshold: 10240, // 只处理比这个值大的资源。按字节计算
