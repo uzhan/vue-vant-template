@@ -101,6 +101,7 @@ module.exports = {
      * 添加CDN参数到htmlWebpackPlugin配置中
      */
     config.plugin('html').tap((args) => {
+      args[0].title = name
       if (!IS_PROD || process.env.VUE_APP_NODE_ENV !== 'production') {
         args[0].cdn = cdn.dev
       } else {
