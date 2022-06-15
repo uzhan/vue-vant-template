@@ -9,6 +9,7 @@
     "stylelint": "stylelint src/**/*.{vue,css,less} --fix"
   },
   "dependencies": {
+    "clipboard": "^2.0.8",
     "core-js": "^3.6.5",
     "dayjs": "^1.10.7",
     "vant": "^2.12.34",
