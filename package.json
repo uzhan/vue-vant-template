@@ -34,8 +34,17 @@
     "vue-eslint-parser": "^9.1.0",
     "vue-tsc": "^1.0.24"
   },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "git add"
+    ],
+    "*.{html,vue,css,less}": [
+      "npm run stylelint"
+    ]
+  },
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }

@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["eslint-config-ali/typescript/vue"]
+  extends: ["eslint-config-ali/typescript/vue", "prettier"]
 };
