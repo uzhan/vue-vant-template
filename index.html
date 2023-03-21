@@ -11,8 +11,8 @@
     <link rel="dns-prefetch" href="<%- host %>" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <% for (var i in cdn.css) { %>
-    <link href="<%= cdn.css[i] %>" rel="preload" as="style" />
-    <link href="<%= cdn.css[i] %>" rel="stylesheet" />
+    <link href="<%- cdn.css[i] %>" rel="preload" as="style" />
+    <link href="<%- cdn.css[i] %>" rel="stylesheet" />
     <% } %>
     <title><%- title %></title>
   </head>
