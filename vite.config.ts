@@ -6,6 +6,8 @@ import { defineConfig, loadEnv } from 'vite';
 import { createHtmlPlugin } from 'vite-plugin-html'
 import { viteVConsole } from 'vite-plugin-vconsole'
 import viteCompression from 'vite-plugin-compression'
+import Components from 'unplugin-vue-components/vite';
+import { VantResolver } from 'unplugin-vue-components/resolvers';
 
 // CDN外链，会插入到index.html中
 const cdn = {
@@ -73,7 +75,10 @@ export default defineConfig(({ mode }) => {
         config: {
           maxLogNumber: 1000,
         }
-      })
+      }),
+      Components({
+        resolvers: [VantResolver()],
+      }),
     ],
     server: {
       port: 9000,
