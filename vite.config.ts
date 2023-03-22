@@ -1,7 +1,7 @@
 import path from 'path'
 import vue from '@vitejs/plugin-vue';
 import { VitePWA } from 'vite-plugin-pwa'
-import postCssPxToRem from 'postcss-pxtorem'
+import postCssPxToViewPort from 'postcss-px-to-viewport'
 import { defineConfig, loadEnv } from 'vite';
 import { createHtmlPlugin } from 'vite-plugin-html'
 import { viteVConsole } from 'vite-plugin-vconsole'
@@ -39,11 +39,8 @@ export default defineConfig(({ mode }) => {
     css: {
       postcss: {
         plugins: [
-          postCssPxToRem({
-            rootValue({ file }) {
-              return file.indexOf('vant') !== -1 ? 37.5 : 75;
-            },
-            propList: ['*'],
+          postCssPxToViewPort({
+            viewportWidth: 375
           })
         ]
       },
