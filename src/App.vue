@@ -1,30 +1,55 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div id="root">
+    <transition name="fade-transform" mode="out-in">
+      <router-view />
+    </transition>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script setup lang="ts">
+import { onBeforeMount } from 'vue';
+import { getSystemAgent, isAlipayOrWechat } from '@/utils';
+
+function handleDocumentInit() {
+  getSystemAgent();
+  isAlipayOrWechat();
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+onBeforeMount(() => handleDocumentInit());
+</script>
+
+<style lang="less">
+@font-face {
+  font-family: DIN Medium;
+  font-style: normal;
+  src: url('https://assets.uphicoo.com/fonts/DIN-Medium.ttf') format('truetype');
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+@font-face {
+  font-family: Source Han Sans CN;
+  src: url('https://mat.uphicoo.com/packages/fonts/SourceHanSansCNRegular.woff') format('woff'),
+    url('https://mat.uphicoo.com/packages/fonts/SourceHanSansCNRegular.ttf') format('truetype');
+}
+
+#root {
+  height: 100vh;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// fade-transform
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all 0.5s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
 }
 </style>
