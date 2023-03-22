@@ -4,15 +4,14 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 // 为了首屏加载快，所以首页不使用懒加载
 import Home from '@/views/home/index.vue'
 
-// const Layout = () => import('@/layout/index.vue');
-
 // 自动扫描 modules 里面的路由模块，路由模块请根据业务自行拆分
-const files = require.context('./modules', false, /\.ts$/)
+const files = import.meta.glob('./modules/**/*.ts', { eager: true, import: 'default' })
 
 const routes: RouteRecordRaw[] = []
+
 // 获取所有的路由内容
-files.keys().forEach((key: string) => {
-  const file = files(key).default
+Object.keys(files).forEach((key: string) => {
+  const file = files[key] as RouteRecordRaw
   // 根据导出的内容判断是否数组，如果数组需使用扩展运算符
   if (Array.isArray(file)) {
     routes.push(...file)
@@ -41,13 +40,17 @@ const constantRoutes = [
   },
   // 404 页面路由
   {
-    path: '*',
+    path: '/404',
     name: 'NotFound',
     component: () => import('@/views/error-page/404/index.vue'),
     meta: {
       title: '页面走丢了'
     }
-  }
+  },
+  {
+    path: "/:catchAll(.*)", // 不识别的path自动匹配404
+    redirect: '/404',
+  },
 ]
 
 const router = createRouter({

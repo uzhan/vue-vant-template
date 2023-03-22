@@ -1,9 +1,7 @@
 <template>
-  <div id="root">
-    <transition name="fade-transform" mode="out-in">
-      <router-view />
-    </transition>
-  </div>
+  <transition name="fade-transform" mode="out-in">
+    <router-view />
+  </transition>
 </template>
 
 <script setup lang="ts">

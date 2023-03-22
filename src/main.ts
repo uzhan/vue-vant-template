@@ -7,12 +7,10 @@ import 'vant/es/toast/style';
 import 'vant/es/dialog/style';
 import 'vant/es/image-preview/style';
 
-import './style.css';
-
 // 创建 Vue 实例
 const app = createApp(App);
 
 // 创建 Pinia 实例
 const pinia = createPinia()
 
-app.use(router).use(pinia).mount('#app');
+app.use(router).use(pinia).mount('#root');
