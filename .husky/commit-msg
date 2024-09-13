@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx commitlint -E HUSKY_GIT_PARAMS
+PATH=$(pwd)/.node/bin:$(pwd)/node_modules/.bin:$PATH commitlint --edit ${1}
