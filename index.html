@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
@@ -8,20 +8,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
     />
-    <link rel="dns-prefetch" href="<%- host %>" />
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <% for (var i in cdn.css) { %>
-    <link href="<%- cdn.css[i] %>" rel="preload" as="style" />
-    <link href="<%- cdn.css[i] %>" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" />
+    <title><%= title %></title>
+    <!-- CDN外链 -->
+    <% for (const cssLink of cdn.css) { %>
+    <link rel="stylesheet" href="<%= cssLink %>" />
     <% } %>
-    <title><%- title %></title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.ts"></script>
-    <!-- 使用CDN加速的JS文件 -->
-    <% for (var i in cdn.js) { %>
-    <script src="<%- cdn.js[i] %>"></script>
+    <!-- CDN外链 -->
+    <% for (const jsLink of cdn.js) { %>
+    <script src="<%= jsLink %>"></script>
     <% } %>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
