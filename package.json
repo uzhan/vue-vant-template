@@ -60,6 +60,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
+    "@types/node": "^25.0.2",
     "@types/webpack-env": "^1.18.5",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",

@@ -9,7 +9,7 @@ import 'vant/es/notify/style';
 import 'vant/es/toast/style';
 
 // 导入 Tailwind CSS
-import '@/assets/tailwind.css';
+import './styles/tailwind.css';
 
 // 创建 Vue 实例
 const app = createApp(App);

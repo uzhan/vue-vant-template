@@ -118,6 +118,7 @@ export default defineConfig(({ mode }) => {
         resolvers: [VantResolver()],
       }),
       Components({
+        dts: 'src/typings/components.d.ts',
         resolvers: [VantResolver()],
       }),
     ],
