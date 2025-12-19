@@ -25,6 +25,11 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   (response) => {
     const res = response.data;
+    /**
+     *  If the custom code is not 000000, it is judged as an error.
+     *  You can modify this according to your own business logic.
+     * 自定义响应码判断依据
+     */
     if (res.code !== '000000') {
       if (res.code === '100000') {
         sessionStorage.removeItem('token');

@@ -6,20 +6,18 @@ defineOptions({
 });
 
 const contentList = reactive([
-  { text: '⚡ Vue3 + Vite5', fullWidth: false },
+  { text: '⚡ Vue3 + Vite7', fullWidth: false },
   { text: '🍕 TypeScript', fullWidth: false },
   { text: '✨ Vant4 组件库', fullWidth: false },
   { text: '🍍 Pinia 状态管理', fullWidth: false },
   { text: '🌀 Tailwindcss 原子类框架', fullWidth: true },
   { text: '🗺️ Vue-router 4', fullWidth: false },
   { text: '👏 集成多种图标方案', fullWidth: false },
-  { text: '🔧 集成 ESLint', fullWidth: false },
-  { text: '🌓 支持深色模式', fullWidth: false },
-  { text: '📏 vmin 视口适配', fullWidth: false },
+  { text: '🔧 集成 Oxlint/Oxfmt', fullWidth: false },
+  { text: '📏 vw 视口适配', fullWidth: false },
   { text: '📡 Axios 封装', fullWidth: false },
   { text: '📦 打包资源 gzip 压缩', fullWidth: false },
   { text: '🛠️ 开发 Mock 数据', fullWidth: false },
-  { text: '🚀 首屏加载动画', fullWidth: false },
   { text: '🔍 开发环境调试面板', fullWidth: false },
 ]);
 </script>
@@ -37,7 +35,7 @@ const contentList = reactive([
       <div>
         <a
           class="flex items-center"
-          href="https://github.com/yulimchen/vue3-h5-template"
+          href="https://github.com/uzhan/vue-vant-template/tree/vue3"
           target="_blank"
         >
           <svg-icon class="text-[20px] mr-[8px]" name="github" />
