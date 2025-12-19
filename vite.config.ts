@@ -20,7 +20,7 @@ const cdn = {
     // 'https://cdn.jsdelivr.net/npm/vue-router@4.2.2/dist/vue-router.global.prod.js',
     // 'https://cdn.jsdelivr.net/npm/pinia@2.1.3/dist/pinia.iife.prod.js',
     // 'https://cdn.jsdelivr.net/npm/axios@1.4.0/dist/axios.min.js',
-  ],
+  ]
 };
 
 // https://vite.dev/config/
@@ -30,8 +30,8 @@ export default defineConfig(({ mode }) => {
     base: env.VITE_APP_BASE_URL,
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url)),
-      },
+        '@': fileURLToPath(new URL('./src', import.meta.url))
+      }
     },
     build: {
       minify: 'esbuild',
@@ -47,13 +47,13 @@ export default defineConfig(({ mode }) => {
             // axios: 'axios',
           },
           manualChunks: {
-            vendor: ['vue', 'vue-router', 'pinia'],
-          },
-        },
-      },
+            vendor: ['vue', 'vue-router', 'pinia']
+          }
+        }
+      }
     },
     esbuild: {
-      drop: ['console', 'debugger'],
+      drop: ['console', 'debugger']
     },
     css: {
       postcss: {
@@ -75,25 +75,25 @@ export default defineConfig(({ mode }) => {
             include: [], // 如果设置了include，那将只有匹配到的文件才会被转换
             landscape: false, // 是否添加根据 landscapeWidth 生成的媒体查询条件 @media (orientation: landscape)
             landscapeUnit: 'vw', // 横屏时使用的单位
-            landscapeWidth: 1628, // 横屏时使用的视口宽度
-          }),
-        ],
-      },
+            landscapeWidth: 1628 // 横屏时使用的视口宽度
+          })
+        ]
+      }
     },
     plugins: [
       vue(),
       VitePWA({
         registerType: 'autoUpdate',
         workbox: {
-          globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-        },
+          globPatterns: ['**/*.{js,css,html,ico,png,svg}']
+        }
       }),
       viteCompression({
         verbose: true,
         disable: false,
         threshold: 10240,
         algorithm: 'gzip',
-        ext: '.gz',
+        ext: '.gz'
       }),
       // createHtmlPlugin 与 Vite 7 不兼容，暂时移除
       createHtmlPlugin({
@@ -102,29 +102,29 @@ export default defineConfig(({ mode }) => {
           data: {
             host: env.VITE_APP_HOST,
             title: env.VITE_APP_NAME,
-            cdn,
-          },
-        },
+            cdn
+          }
+        }
       }),
       viteVConsole({
         entry: fileURLToPath(new URL('./src/main.ts', import.meta.url)),
         localEnabled: false, // 本地是否启用
         enabled: env.VITE_APP_NODE_ENV !== 'production', // 是否启用
         config: {
-          maxLogNumber: 1000,
-        },
+          maxLogNumber: 1000
+        }
       }),
       AutoImport({
-        resolvers: [VantResolver()],
+        resolvers: [VantResolver()]
       }),
       Components({
         dts: 'src/typings/components.d.ts',
-        resolvers: [VantResolver()],
-      }),
+        resolvers: [VantResolver()]
+      })
     ],
     server: {
       port: 9002,
-      open: false,
-    },
+      open: false
+    }
   };
 });

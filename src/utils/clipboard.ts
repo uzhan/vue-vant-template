@@ -1,13 +1,12 @@
-
-import { Toast } from 'vant'
-import Clipboard from 'clipboard'
+import { Toast } from 'vant';
+import Clipboard from 'clipboard';
 
 function clipboardSuccess() {
-  Toast.success('复制成功')
+  Toast.success('复制成功');
 }
 
 function clipboardError() {
-  Toast.fail('复制失败')
+  Toast.fail('复制失败');
 }
 
 /**
@@ -21,18 +20,18 @@ function clipboardError() {
 export default function handleClipboard(event: any, text: string): void {
   const clipboard: any = new Clipboard(event.target, {
     text: () => text
-  })
+  });
   clipboard.on('success', () => {
-    clipboardSuccess()
-    clipboard.off('error')
-    clipboard.off('success')
-    clipboard.destroy()
-  })
+    clipboardSuccess();
+    clipboard.off('error');
+    clipboard.off('success');
+    clipboard.destroy();
+  });
   clipboard.on('error', () => {
-    clipboardError()
-    clipboard.off('error')
-    clipboard.off('success')
-    clipboard.destroy()
-  })
-  clipboard.onClick(event)
+    clipboardError();
+    clipboard.off('error');
+    clipboard.off('success');
+    clipboard.destroy();
+  });
+  clipboard.onClick(event);
 }

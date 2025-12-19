@@ -1,4 +1,4 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia';
 
 interface IMainStoreState {
   count: number;
@@ -18,4 +18,4 @@ export const useMainStore = defineStore('main', {
       this.count += 1;
     }
   }
-})
+});

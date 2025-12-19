@@ -1,0 +1,43 @@
+{
+  "settings": {
+    "jsx-a11y/label-has-associated-control": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.vue"],
+      "rules": {}
+    },
+    {
+      "files": ["**/*.{ts,tsx}"],
+      "rules": {}
+    },
+    {
+      "files": ["**/*.json"],
+      "rules": {}
+    }
+  ],
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "no-var": "error",
+    "prefer-const": "error",
+    "eqeqeq": "error",
+    "no-implicit-coercion": "error",
+    "curly": "error",
+    "brace-style": ["error", "1tbs"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", "never"],
+    "indent": ["error", 2],
+    "no-trailing-spaces": "error",
+    "eol-last": ["error", "always"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "space-before-blocks": "error",
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
+    "arrow-spacing": "error",
+    "keyword-spacing": "error",
+    "space-infix-ops": "error"
+  }
+}

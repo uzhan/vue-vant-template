@@ -6,9 +6,9 @@
  */
 export function isAlipayOrWechat() {
   if (/MicroMessenger/.test(window.navigator.userAgent)) {
-    sessionStorage.setItem('app_env', 'wechat')
+    sessionStorage.setItem('app_env', 'wechat');
   } else if (/AlipayClient/.test(window.navigator.userAgent)) {
-    sessionStorage.setItem('app_env', 'alipay')
+    sessionStorage.setItem('app_env', 'alipay');
   }
 }
 
@@ -18,17 +18,17 @@ export function isAlipayOrWechat() {
 export function getSystemAgent() {
   // 判断是否为ios端访问
   if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-    sessionStorage.setItem('app_system', 'ios')
+    sessionStorage.setItem('app_system', 'ios');
   }
   if (/(Android|Adr)/i.test(navigator.userAgent)) {
-    sessionStorage.setItem('app_system', 'android')
+    sessionStorage.setItem('app_system', 'android');
   }
 }
 
 /** 设置页面title */
 export function getPageTitle(pageTitle: string) {
-  const {title} = import.meta.env.VITE_APP_NAME
+  const { title } = import.meta.env.VITE_APP_NAME;
   if (pageTitle) {
-    return `${pageTitle} - ${title}`
+    return `${pageTitle} - ${title}`;
   }
 }

@@ -2,44 +2,44 @@ import axios from 'axios';
 import { showFailToast } from 'vant';
 
 const service = axios.create({
-  baseURL: import.meta.env.VITE_APP_BASE_API,
-})
+  baseURL: import.meta.env.VITE_APP_BASE_API
+});
 
 // Request interceptors
 service.interceptors.request.use(
   (config) => {
     // Add X-Access-Token header to every request, you can add other custom headers here
-    const token = sessionStorage.getItem('token') || ''
+    const token = sessionStorage.getItem('token') || '';
 
     if (token) {
-      Object.assign(config.headers, { Authorization: token })
+      Object.assign(config.headers, { Authorization: token });
     }
-    return config
+    return config;
   },
   (error) => {
-    Promise.reject(error)
+    Promise.reject(error);
   }
-)
+);
 
 // Response interceptors
 service.interceptors.response.use(
   (response) => {
-    const res = response.data
+    const res = response.data;
     if (res.code !== '000000') {
       if (res.code === '100000') {
-        sessionStorage.removeItem('token')
+        sessionStorage.removeItem('token');
       } else {
-        res.message && showFailToast(res.message)
+        res.message && showFailToast(res.message);
       }
-      return Promise.reject(res.code)
+      return Promise.reject(res.code);
     } else {
-      return response.data
+      return response.data;
     }
   },
   (error) => {
-    showFailToast('网络故障，请稍后再试！')
-    return Promise.reject(error)
+    showFailToast('网络故障，请稍后再试！');
+    return Promise.reject(error);
   }
-)
+);
 
-export default service
+export default service;

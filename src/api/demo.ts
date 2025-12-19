@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '@/utils/request';
 
 /**
  * @description demo
@@ -13,5 +13,5 @@ export function queryDemo(params: API.Demo.Params) {
     url: '/fetch-request',
     method: 'GET',
     params
-  })
+  });
 }
