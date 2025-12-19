@@ -59,7 +59,7 @@ const router = createRouter({
   routes: [...constantRoutes, ...routes]
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _, next) => {
   window.document.title = to.meta.title as string;
   next();
 });

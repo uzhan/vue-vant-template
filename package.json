@@ -68,12 +68,11 @@
     "unplugin-auto-import": "^0.18.3",
     "unplugin-vue-components": "^0.24.1",
     "vconsole": "^3.15.1",
+    "vite": "npm:rolldown-vite@7.2.5",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-html": "^3.2.2",
-    "vite-plugin-pwa": "^0.14.7",
     "vite-plugin-style-import": "^2.0.0",
     "vite-plugin-vconsole": "^1.3.1",
-    "vite": "npm:rolldown-vite@7.2.5",
     "vue-tsc": "^3.1.4"
   },
   "pnpm": {
