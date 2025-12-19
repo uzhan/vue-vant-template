@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+set -e
 
-PATH=$(pwd)/.node/bin:$(pwd)/node_modules/.bin:$PATH lint-staged
+if [ ! -f node_modules/.bin/lint-staged ]; then
+  exit 0
+fi
+
+node_modules/.bin/lint-staged
