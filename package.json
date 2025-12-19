@@ -22,8 +22,8 @@
   "scripts": {
     "build": "vue-tsc && vite build",
     "dev": "vite",
-    "lint": "oxlint .",
-    "lint:fix": "oxfmt .",
+    "lint": "oxlint src",
+    "lint:fix": "oxfmt src",
     "prepare": "husky",
     "preview": "vite preview"
   },
@@ -33,9 +33,8 @@
     ]
   },
   "lint-staged": {
-    "*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,json,jsonc,json5,yaml,yml,html,css,scss,less,graphql,md,mdx}": [
-      "oxfmt",
-      "git add"
+    "src/**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,json,jsonc,json5,yaml,yml,html,css,scss,less,graphql,md,mdx}": [
+      "oxfmt"
     ]
   },
   "dependencies": {
@@ -50,6 +49,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@types/node": "^25.0.2",
     "@vant/auto-import-resolver": "^1.2.1",
     "@vitejs/plugin-vue": "^5.2.4",
